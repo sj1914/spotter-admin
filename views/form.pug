@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  -data = data || {}
+
+  if errors
+    ul
+      for error in errors
+        li= error.msg
+
+  if dogs
+    h3 Existing Breeds
+    ol
+      for dog in dogs
+        li= dog.breed
+
+  h3 Add a new breed:
+  form(action="." method="POST")
+    label(for="breed") Breed: 
+    input(
+      type="text"
+      id="breed"
+      name="breed"
+      value=data.name
+    )
+    ul
+
+    label(for="description") Description: 
+    textarea(
+      id="description"
+      name="description"
+    )
+    ul
+
+    label(for="image") Image: 
+    input(
+      type="file"
+      id="image"
+      name="image"
+      accept="image/jpg"
+    )
+    ul
+
+    label(for="illustration") Illustration: 
+    input(
+      type="file"
+      id="illustration"
+      name="illustration"
+      accept="image/jpg"
+    )
+    ul
+
+    label(for="size") Size: 
+    select(
+      id="size"
+      name="size"
+    )
+      option(
+        value="large"
+      ) Large
+      option(
+        value="large"
+      ) Medium
+      option(
+        value="large"
+      ) Small
+    ul
+
+
+    input(type="submit" value="Submit")
