@@ -1,5 +1,5 @@
 # spotter-admin
-Spotter is an app which lets users make walks more interesting by keeping track of the dog breeds they've seen over time. Whilst also being educational!
+Spotter is an app which lets users make walks more interesting by keeping track of the dog breeds they've seen over time. Whilst also being educational! This admin panel is needed to support that project. 
 
 This repo is very much a WIP but here is our goal...
 
